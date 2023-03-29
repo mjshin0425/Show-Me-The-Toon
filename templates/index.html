@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>쇼미더무비</title>
     <style>
+        /* SHOW ME THE TOON 폰트 */
         @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-
         * {
             font-family: 'Gowun Dodum', sans-serif;
         }
+        /* SHOW ME THE TOON 폰트 */
 
+        /* SHOW ME THE TOON 배경*/
         .title {
             width: 1000px;
             height: 198px;
@@ -31,6 +33,8 @@
             /* background-position: center; */
             background-size: cover;
         }
+        /* SHOW ME THE TOON 배경*/
+
         .card {
             /* background-color: green; */
             border: 3px solid grey;
@@ -66,9 +70,45 @@
             width: 130px;
             height: 60px;
             margin-left: 40px;
-            
         }
     </style>
+    <script>
+
+        $(document).ready(function () {
+            listing();
+        });
+
+        function listing() {
+            fetch('/toon').then((res) => res.json()).then((data) => {
+                let rows = data['result']
+                $('#cards-box').empty()
+                rows.forEach((a) => {
+                    let image = a['image']
+                    let title = a['title']
+                    let review = a['review']
+
+                    let temp_html = ``
+                    $('#card').append(temp_html)
+                })
+            })
+        }
+
+        function posting() {
+            let image = $('#image').val()
+            let title = $('#title').val()
+            let review = $('#review').val()
+
+            let formData = new FormData();
+            formData.append("url_give", url);
+            formData.append("image_give", image);
+            formData.append("title_give", title);
+            formData.append("review_give", review);
+
+            fetch('/toon', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
+                window.location.reload()
+            })
+        }
+    </script>
 </head>
 
 <body>
