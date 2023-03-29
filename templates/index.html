@@ -9,9 +9,11 @@
     <style>
         /* SHOW ME THE TOON 폰트 */
         @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
         * {
             font-family: 'Gowun Dodum', sans-serif;
         }
+
         /* SHOW ME THE TOON 폰트 */
 
         /* SHOW ME THE TOON 배경*/
@@ -33,6 +35,7 @@
             /* background-position: center; */
             background-size: cover;
         }
+
         /* SHOW ME THE TOON 배경*/
 
         .card {
@@ -49,27 +52,44 @@
             align-items: center;
             /* justify-content: center; */
         }
-        .card > img {
+
+        .card>img {
             border: 5px solid white;
             margin-left: 230px;
             width: 150px;
             height: 150px;
         }
+
         .toontitle {
             border: 3px white;
             width: 200px;
             margin-left: 20px;
-            
+
         }
+
         .summary {
             border: 3px white;
             width: 400px;
             margin-left: 20px;
         }
+
         .viewbutton {
             width: 130px;
             height: 60px;
             margin-left: 40px;
+        }
+
+        #wrap .cards {
+            /* width: ;
+            height: ; */
+           
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left:-50%;
+            margin-top: -50%;
+
+            /* margin: auto; */
         }
     </style>
     <script>
@@ -116,17 +136,19 @@
         src="https://newsimg.hankookilbo.com/cms/articlerelease/2020/07/20/bc394b7b-7019-4425-bc46-2677519e9580.jpg">
         <h1>SHOW ME THE TOON</h1>
     </div>
-    <div class="card">
-        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" /> <!--이미지 -->
-        <h5 class="toontitle">여기에 영화제목이 들어갑니다.</h5>
-        <p class="summary">줄거리가 들어갑니다줄거리가 들어갑니다줄거리가 들어갑니다줄거리가 들어갑니다줄거리가 들어갑니다줄거리가 들어갑니다</p>
-        <button class="viewbutton">리뷰보기</button>
-    </div>
-    <div class="card">
-        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" /> <!--이미지 -->
-        <h5 class="toontitle">여기에 영화제목이 들어갑니다.</h5>
-        <p class="summary" .>줄거리가 들어갑니다>줄거리가 들어갑니다>줄거리가 들어갑니다>줄거리가 들어갑니다>줄거리가 들어갑니다>줄거리가 들어갑니다</p>
-        <button class="viewbutton">리뷰보기</button>
+    <div class="allcards">
+        <div class="card">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" /> <!--이미지 -->
+            <h5 class="toontitle">여기에 영화제목이 들어갑니다.</h5>
+            <p class="summary">줄거리가 들어갑니다줄거리가 들어갑니다줄거리가 들어갑니다줄거리가 들어갑니다줄거리가 들어갑니다줄거리가 들어갑니다</p>
+            <button class="viewbutton">리뷰보기</button>
+        </div>
+        <div class="card">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" /> <!--이미지 -->
+            <h5 class="toontitle">여기에 영화제목이 들어갑니다.</h5>
+            <p class="summary" .>줄거리가 들어갑니다>줄거리가 들어갑니다>줄거리가 들어갑니다>줄거리가 들어갑니다>줄거리가 들어갑니다>줄거리가 들어갑니다</p>
+            <button class="viewbutton">리뷰보기</button>
+        </div>
     </div>
 </body>
 
